@@ -1,0 +1,39 @@
+//using c++
+#include <iostream>
+using namespace std;
+int main()
+{
+    int i,j,n;
+    int min,loc;
+    int temp;
+    int a[100];
+    cout<<"enter the size of the array";
+    cin>>n;
+    cout<<"enter the element in array:";
+    for(i=0;i<n;i++)
+    {
+        cin>>a[i];
+    }
+    for(i=0;i<n-1;i++)
+    {
+        min=a[i];
+        loc=i;
+        for(j=i+1;j<n;j++)
+        {
+            if(min>a[j])
+            {
+               min=a[j];
+               loc=j;
+            }
+        }
+    }
+    temp=a[i];
+    a[i]=a[loc];
+    a[loc]=temp;
+    cout<<"array after swaping:"<<endl;
+    for(i=0;i<n;i++)
+    {
+    cout<<a[i];
+    }
+    return 0;
+}
