@@ -1,0 +1,36 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int n,i,key,comp,t;
+    int a[n];
+    cin>>n;
+    for(i=0;i<n;i++)
+    {
+        cin>>a[i];
+    }
+    cout<<"enter the tst cases:";
+    cin>>t;
+    while(t--)
+    {
+    cin>>key;
+    for(i=0;i<n;i++)
+    {
+        if(a[i]==key)
+        {
+            cout<<"key found at "<<i;
+            comp=i+1;
+            cout<<comp;
+        }
+        
+        else
+        {
+            cout<<"key not found:";
+            comp=i+1;
+            cout<<comp;
+        }
+        
+    }
+    }
